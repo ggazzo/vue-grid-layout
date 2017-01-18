@@ -31,6 +31,7 @@
                            :y="item.y"
                            :w="item.w"
                            :h="item.h"
+                           v-on:resize='oi'
                            :min-w="2"
                            :min-h="2"
                            :i="item.i">
@@ -89,6 +90,9 @@
             this.index = this.layout.length;
         },
         methods: {
+            oi () {
+                console.log("aaaaa")
+            },
             increaseWidth: function(item) {
                 var width = document.getElementById("content").offsetWidth;
                 width += 20;

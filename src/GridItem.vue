@@ -294,6 +294,7 @@
 //                        console.log("### resize end => " + JSON.stringify(newSize));
                         this.resizing = null;
                         this.isResizing = false;
+                        this.$emit('resize')
                         break;
                 }
 

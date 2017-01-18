@@ -216,6 +216,7 @@
 
                 } else {
                     this.isDragging = false;
+                    this.$emit('resize')
                 }
                 var l = getLayoutItem(this.layout, id);
                 l.h = h;
