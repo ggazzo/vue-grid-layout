@@ -216,7 +216,6 @@
 
                 } else {
                     this.isDragging = false;
-                    this.$emit('resize')
                 }
                 var l = getLayoutItem(this.layout, id);
                 l.h = h;
@@ -224,6 +223,7 @@
                 compact(this.layout, this.verticalCompact);
                 eventBus.$emit("compact");
                 this.updateHeight();
+                this.$emit('resize', l);
             },
         },
     }
