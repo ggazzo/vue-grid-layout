@@ -173,6 +173,7 @@
             onWindowResize: function () {
                 if (this.$refs !== null && this.$refs.item !== null) {
                     this.width = this.$refs.item.offsetWidth;
+                    this.$emit("update");
                 }
             },
             containerHeight: function () {
